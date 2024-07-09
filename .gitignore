@@ -11,6 +11,7 @@ leetbot.db
 
 # Logs
 logs/
+!logs/.gitkeep
 
 # Byte-compiled / optimized / DLL files
 *.pyc
