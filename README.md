@@ -19,8 +19,15 @@ Use the following [invite link](https://discord.com/oauth2/authorize?client_id=1
 
 - Create a .env file in the root directory of your project.
 - Define the following environment variables:
-  - `DISCORD_TOKEN=your_discord_bot_token_here`
+  - `API_URL=your_leetcode_api_url_here`
+  - `BOT_TOKEN=your_discord_bot_token_here`
   - `CHANNEL_ID=your_discord_channel_id_here`
+  - `DATABASE_FILE=your_sqlite_db_filename_here`
+  - `EMBED_NAME=your_embed_name_here`
+  - `EMBED_URL=your_embed_url_here`
+  - `EMBED_ICON_URL=your_embed_icon_url_here`
+  - `EMBED_THUMBNAIL_URL=your_embed_thumbnail_url_here`
+- Or see the [`.env.example`](./.env.example) file.
 
 ## Install Dependencies:
 
@@ -33,7 +40,7 @@ Use the following [invite link](https://discord.com/oauth2/authorize?client_id=1
 
 - Start the bot using Python:
 
-  - `python bot.py`
+  - `python main.py`
 - LeetBot will now connect to Discord and begin posting daily LeetCode challenges.
 
 ## Interact with LeetBot:
