@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_URL= os.getenv('API_URL')
-BOT_TOKEN = os.getenv('BOT_TOKEN')
+BOT_TOKEN = os.getenv('DISCORD_TOKEN')
 CHANNEL_ID = int(os.getenv('CHANNEL_ID'))
 DATABASE_FILE = os.getenv('DATABASE_FILE')
 EMBED_NAME = os.getenv('EMBED_NAME')

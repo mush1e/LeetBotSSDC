@@ -52,8 +52,9 @@ async def schedule_daily_message(bot: commands.Bot, logger: logging.Logger) -> N
         wait_time = (then - now).total_seconds()
         logger.info(f"Waiting for {wait_time} seconds until next post.")
         await asyncio.sleep(1000)
-        channel = bot.get_channel(env.CHANNEL_ID)
-        if channel:
-            await post_daily_problem(channel)
-        else:
-            logger.error("Channel not found. Ensure the CHANNEL_ID is correct.")
+        for guild in bot.guilds:
+            channel = bot.get_channel(env.CHANNEL_ID) 
+            if channel:
+                await post_daily_problem(channel)
+            else:
+                logger.error(f"Channel not found for guild {guild.name} (ID: {guild.id}). Ensure the CHANNEL_ID is correct.")

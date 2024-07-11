@@ -14,5 +14,4 @@ def run() -> None:
     bot.run(env.BOT_TOKEN, root_logger=True)
 
 if __name__ == "__main__":
-    init_db()
     run()
