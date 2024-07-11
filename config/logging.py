@@ -1,12 +1,5 @@
-import os
 import logging
 from logging.config import dictConfig
-from dotenv import load_dotenv
-
-load_dotenv()
-
-TOKEN = os.getenv('DISCORD_TOKEN')
-CHANNEL_ID = int(os.getenv('CHANNEL_ID'))
 
 LOGGING_CONFIG = {
     "version": 1,
@@ -47,3 +40,5 @@ LOGGING_CONFIG = {
 }
 
 dictConfig(LOGGING_CONFIG)
+
+logger = logging.getLogger('bot')
