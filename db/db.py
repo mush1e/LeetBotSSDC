@@ -1,10 +1,9 @@
 import sqlite3
-from config import env
 
-def init_db() -> None:
-    """Initialize sqlite3 database and creates users table"""
-    conn = sqlite3.connect(env.DATABASE_FILE)
-
+def init_db(guild_id) -> None:
+    """Initialize SQLite database for the specified guild if not exists."""
+    db_name = f'{guild_id}_leetbot.db'
+    conn = sqlite3.connect(db_name)
     cursor = conn.cursor()
     cursor.execute('''CREATE TABLE IF NOT EXISTS users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
